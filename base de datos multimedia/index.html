@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mundiales • Historia, jugadas y cultura</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/120px-Soccerball.svg.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Barra superior mejorada -->
+  <header class="nav">
+    <div class="nav__inner container">
+      <a class="brand" href="#hero" data-scroll>
+        <span class="brand__logo">⚽</span>
+        <span class="brand__text">Mundiales</span>
+      </a>
+
+      <button class="nav__toggle" id="nav-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <nav class="nav__links" id="nav-links">
+        <a href="#hero" data-scroll>Inicio</a>
+        <a href="#mundiales" data-scroll>Mundiales</a>
+        <a href="#publicaciones" data-scroll>Publicaciones</a>
+        <a href="#estadios" data-scroll>Estadios</a>
+        <a href="#jugadores" data-scroll>Jugadores</a>
+        <a href="#timeline" data-scroll>Timeline</a>
+        <a href="#tools" data-scroll>Herramientas</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="btn btn--ghost" id="btn-open-login">Ingresar</button>
+        <button class="btn btn--primary" id="btn-open-register">Registrarse</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <div class="hero__bg">
+      <div class="hero__glow"></div>
+    </div>
+    <div class="container hero__grid">
+      <div class="hero__copy">
+        <h1>La historia de los <span class="txt-gradient">Mundiales</span></h1>
+        <p class="sub">Explora sedes, jugadas épicas, entrevistas y estadísticas. Filtra por país, año o categoría y revive cada copa.</p>
+        
+        <div class="countdown-section">
+          <h3>⚽ Próximo Mundial 2026 ⚽</h3>
+          <div id="countdown" class="countdown">
+            <div class="countdown-item">
+              <span id="days">0</span>
+              <small>Días</small>
+            </div>
+            <div class="countdown-item">
+              <span id="hours">0</span>
+              <small>Horas</small>
+            </div>
+            <div class="countdown-item">
+              <span id="minutes">0</span>
+              <small>Min</small>
+            </div>
+            <div class="countdown-item">
+              <span id="seconds">0</span>
+              <small>Seg</small>
+            </div>
+          </div>
+          <div class="countdown-progress-container">
+            <div class="countdown-progress"></div>
+          </div>
+          <div class="countdown-info">
+            🇺🇸🇨🇦🇲🇽 Canadá, Estados Unidos y México • 11 de Junio, 2026
+          </div>
+        </div>
+        
+        <div class="hero__cta">
+          <a href="#mundiales" class="btn btn--primary" data-scroll>Explorar mundiales</a>
+          <button class="btn btn--ghost" id="btn-open-register-hero">Subir contenido</button>
+        </div>
+        <div class="badges">
+          <span class="badge">Jugadas</span>
+          <span class="badge">Entrevistas</span>
+          <span class="badge">Partidos</span>
+          <span class="badge">Estadísticas</span>
+          <span class="badge">Cultura</span>
+        </div>
+      </div>
+      <figure class="hero__art" aria-hidden="true">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.b9KOlO-1uyXdfN9bsKh9GwHaHa?w=1875&h=1875&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Balón de fútbol">
+      </figure>
+    </div>
+  </section>
+
+  <!-- Publicaciones destacadas -->
+  <section class="featured-section">
+    <div class="container">
+      <div class="featured-header">
+        <h2 class="featured-title">Publicaciones Destacadas</h2>
+        <a href="#publicaciones" class="view-all" data-scroll>
+          Ver todas <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+      
+      <div class="ticket-cards">
+        <div class="ticket-card">
+          <div class="ticket-image">
+            <img src="https://static.dw.com/image/63723337_605.jpg" alt="Final Mundial 2014">
+          </div>
+          <div class="ticket-content">
+            <h3 class="ticket-title">Final Mundial 2014</h3>
+            <p class="ticket-meta">Alemania vs Argentina • 13 Jul 2014</p>
+            <p class="ticket-description">Revive el gol de Gotze en el minuto 113 que le dio a Alemania su cuarto título mundial.</p>
+            <div class="ticket-footer">
+              <span class="ticket-price">1200 👍</span>
+              <button class="btn-ticket" data-publication="1">Ver publicación</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="ticket-card">
+          <div class="ticket-image">
+            <img src="https://th.bing.com/th/id/OIP.3e6Tm4Ya1uqeOot4FZOc_gHaFH?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Maradona 1986">
+          </div>
+          <div class="ticket-content">
+            <h3 class="ticket-title">La Mano de Dios</h3>
+            <p class="ticket-meta">Argentina vs Inglaterra • 22 Jun 1986</p>
+            <p class="ticket-description">El polémico gol de Maradona que sigue generando debate después de más de 30 años.</p>
+            <div class="ticket-footer">
+              <span class="ticket-price">980 👍</span>
+              <button class="btn-ticket" data-publication="2">Ver publicación</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="ticket-card">
+          <div class="ticket-image">
+            <img src="https://th.bing.com/th/id/OIP.oDYmKg6mTsZuzn4xBgb8SAHaEK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Brasil 1970">
+          </div>
+          <div class="ticket-content">
+            <h3 class="ticket-title">El Equipo Perfecto</h3>
+            <p class="ticket-meta">Brasil 1970 • Toda la copa</p>
+            <p class="ticket-description">Considerado por muchos el mejor equipo de la historia, con Pelé, Jairzinho, Rivelino y Tostão.</p>
+            <div class="ticket-footer">
+              <span class="ticket-price">1500 👍</span>
+              <button class="btn-ticket" data-publication="3">Ver publicación</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Línea de Tiempo -->
+  <section id="timeline" class="section container">
+    <div class="section__head">
+      <h2>Línea de Tiempo de los Mundiales</h2>
+      <p class="muted">Un recorrido cronológico por la historia de las Copas del Mundo.</p>
+    </div>
+    <div class="timeline" id="timeline-container"></div>
+  </section>
+
+  <!-- Mundiales -->
+  <section id="mundiales" class="section container">
+    <div class="section__head">
+      <h2>Mundiales</h2>
+      <p class="muted">Navega por todas las ediciones, ordena y filtra a tu gusto.</p>
+    </div>
+
+    <form id="filters" class="filters" autocomplete="off">
+      <div class="filters__group">
+        <label for="search">Buscar</label>
+        <input id="search" type="search" placeholder="País, año, apodo del mundial…">
+      </div>
+
+      <div class="filters__group">
+        <label for="host">País sede</label>
+        <select id="host">
+          <option value="">Todos</option>
+        </select>
+      </div>
+
+      <div class="filters__group">
+        <label for="year">Año</label>
+        <select id="year">
+          <option value="">Todos</option>
+        </select>
+      </div>
+
+      <div class="filters__group">
+        <label for="sort">Ordenar por</label>
+        <select id="sort">
+          <option value="year-desc">Cronológico ↓ (default)</option>
+          <option value="year-asc">Cronológico ↑</option>
+          <option value="host-asc">País A→Z</option>
+          <option value="likes-desc">Más likes</option>
+          <option value="comments-desc">Más comentarios</option>
+        </select>
+      </div>
+
+      <div class="filters__group filters__actions">
+        <button type="reset" class="btn btn--ghost">Limpiar</button>
+        <button type="submit" class="btn btn--primary">Aplicar</button>
+      </div>
+    </form>
+
+    <div id="worldcup-grid" class="grid"></div>
+  </section>
+
+  <!-- Estadios -->
+  <section id="estadios" class="section container">
+    <div class="section__head">
+      <h2>Estadios Legendarios</h2>
+      <p class="muted">Los escenarios que han albergado los momentos más importantes de la historia de los mundiales.</p>
+    </div>
+
+    <div class="stadiums-grid" id="stadiums-grid">
+      <div class="stadium-card" data-stadium="maracana">
+        <div class="stadium-image">
+          <img src="https://th.bing.com/th/id/OIP.ulMoT_0JINFB8IqEyu4gugHaE8?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Estadio Maracaná">
+        </div>
+        <div class="stadium-content">
+          <h3 class="stadium-name">Maracaná</h3>
+          <p class="stadium-location">Río de Janeiro, Brasil</p>
+          <div class="stadium-capacity">
+            <i class="fas fa-users"></i>
+            <span>78,838 espectadores</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stadium-card" data-stadium="azteca">
+        <div class="stadium-image">
+          <img src="https://th.bing.com/th/id/OIP.TxVvbFmBnajqzc6Q-j1i3wHaEo?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Estadio Azteca">
+        </div>
+        <div class="stadium-content">
+          <h3 class="stadium-name">Estadio Azteca</h3>
+          <p class="stadium-location">Ciudad de México, México</p>
+          <div class="stadium-capacity">
+            <i class="fas fa-users"></i>
+            <span>87,523 espectadores</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stadium-card" data-stadium="wembley">
+        <div class="stadium-image">
+          <img src="https://th.bing.com/th/id/OIP.Nfl5CnlLRC4iabtyDOgVDwHaEo?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Wembley">
+        </div>
+        <div class="stadium-content">
+          <h3 class="stadium-name">Wembley</h3>
+          <p class="stadium-location">Londres, Inglaterra</p>
+          <div class="stadium-capacity">
+            <i class="fas fa-users"></i>
+            <span>90,000 espectadores</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Jugadores -->
+  <section id="jugadores" class="section container">
+    <div class="section__head">
+      <h2>Jugadores Legendarios</h2>
+      <p class="muted">Las figuras que marcaron la historia de los mundiales.</p>
+    </div>
+
+    <div class="players-grid" id="players-grid">
+      <div class="player-card" data-player="pele">
+        <div class="player-image">
+          <img src="https://tse3.mm.bing.net/th/id/OIP.M4-C9bbTPBUJujnFCkfn6AHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Pelé">
+          <span class="player-flag">🇧🇷</span>
+        </div>
+        <div class="player-content">
+          <h3 class="player-name">Pelé</h3>
+          <p class="player-position">Delantero</p>
+          <div class="player-stats">
+            <div class="player-stat">
+              <span class="player-stat-value">3</span>
+              <span class="player-stat-label">Mundiales</span>
+            </div>
+            <div class="player-stat">
+              <span class="player-stat-value">12</span>
+              <span class="player-stat-label">Goles</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="player-card" data-player="maradona">
+        <div class="player-image">
+          <img src="https://th.bing.com/th/id/OIP.jWcvEckLjZxa3yi7fxPCMAHaFj?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Maradona">
+          <span class="player-flag">🇦🇷</span>
+        </div>
+        <div class="player-content">
+          <h3 class="player-name">Maradona</h3>
+          <p class="player-position">Mediocampista</p>
+          <div class="player-stats">
+            <div class="player-stat">
+              <span class="player-stat-value">4</span>
+              <span class="player-stat-label">Mundiales</span>
+            </div>
+            <div class="player-stat">
+              <span class="player-stat-value">8</span>
+              <span class="player-stat-label">Goles</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="player-card" data-player="ronaldinho">
+        <div class="player-image">
+          <img src="https://th.bing.com/th/id/OIP.Lu0XMxV4jzkHeOSE2hZ0BwHaEK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Ronaldinho">
+          <span class="player-flag">🇧🇷</span>
+        </div>
+        <div class="player-content">
+          <h3 class="player-name">Ronaldinho</h3>
+          <p class="player-position">Delantero</p>
+          <div class="player-stats">
+            <div class="player-stat">
+              <span class="player-stat-value">2</span>
+              <span class="player-stat-label">Mundiales</span>
+            </div>
+            <div class="player-stat">
+              <span class="player-stat-value">2</span>
+              <span class="player-stat-label">Goles</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publicaciones -->
+  <section id="publicaciones" class="section container">
+    <div class="section__head">
+      <h2>Publicaciones de la Comunidad</h2>
+      <p class="muted">Contenido enviado por la comunidad. Requiere aprobación de admin (demo UI).</p>
+    </div>
+
+    <div class="tabs">
+      <button class="tab is-active" data-tab="recent">Recientes</button>
+      <button class="tab" data-tab="likes">Más likes</button>
+      <button class="tab" data-tab="comments">Más comentarios</button>
+      <div class="tabs__spacer"></div>
+      <label class="switch">
+        <input type="checkbox" id="toggle-admin">
+        <span class="slider"></span>
+        <span class="switch__label">Modo Admin</span>
+      </label>
+    </div>
+
+    <div id="posts" class="masonry"></div>
+  </section>
+
+  <!-- Herramientas -->
+  <section id="tools" class="section container">
+    <div class="section__head">
+      <h2>Herramientas</h2>
+      <p class="muted">Utilidades para interactuar con el contenido del sitio.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+      <!-- Ver publicación individual -->
+      <div class="form-section">
+        <h3>Ver Publicación Individual</h3>
+        <p class="muted">Ingresa el ID de una publicación para verla en detalle.</p>
+        <div style="display: flex; gap: 1rem; align-items: end;">
+          <div style="flex: 1;">
+            <label for="post-id-input">ID de publicación</label>
+            <input type="number" id="post-id-input" placeholder="Ej: 1, 2, 3..." min="1">
+          </div>
+          <button class="btn btn--primary" id="view-individual-post">Ver Publicación</button>
+        </div>
+      </div>
+
+      <!-- Crear publicación -->
+      <div class="form-section">
+        <h3>Crear Nueva Publicación</h3>
+        <p class="muted">Comparte tu contenido sobre los mundiales.</p>
+        <form id="create-post-form" class="form">
+          <div class="form__row">
+            <label>Título de la publicación
+              <input type="text" id="new-post-title" required>
+            </label>
+            <label>Categoría
+              <select id="new-post-category" required>
+                <option value="">Selecciona una categoría</option>
+                <option value="Jugadas">Jugadas</option>
+                <option value="Entrevistas">Entrevistas</option>
+                <option value="Partidos">Partidos</option>
+                <option value="Estadísticas">Estadísticas</option>
+                <option value="Asistentes">Asistentes</option>
+                <option value="Incidentes">Incidentes</option>
+                <option value="Polémicas">Polémicas</option>
+                <option value="Sedes">Sedes</option>
+                <option value="Cultura">Cultura</option>
+              </select>
+            </label>
+          </div>
+          
+          <div class="form__row">
+            <label>Mundial
+              <select id="new-post-worldcup" required>
+                <option value="">Selecciona un mundial</option>
+              </select>
+            </label>
+            <label>Tu nombre
+              <input type="text" id="new-post-author" required>
+            </label>
+          </div>
+          
+          <label>Descripción
+            <textarea id="new-post-description" rows="3" required></textarea>
+          </label>
+          
+          <label>URL de imagen/video
+            <input type="url" id="new-post-media" placeholder="https://...">
+          </label>
+          
+          <div class="form__actions">
+            <button type="submit" class="btn btn--primary">Crear Publicación</button>
+          </div>
+          <p class="form__hint">Tu publicación será revisada por un administrador antes de ser publicada.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section container">
+    <div class="section__head">
+      <h2>Preguntas Frecuentes</h2>
+    </div>
+    <details class="faq">
+      <summary>¿Quién puede publicar?</summary>
+      <p>Cualquier persona puede crear publicaciones. El contenido queda pendiente de aprobación por un administrador antes de hacerse público.</p>
+    </details>
+    <details class="faq">
+      <summary>¿Qué categorías puedo elegir?</summary>
+      <p>Jugadas, entrevistas, partidos, estadísticas, asistentes, incidentes, polémicas, sedes, cultura, entre otras.</p>
+    </details>
+    <details class="faq">
+      <summary>¿Qué tipos de archivo se aceptan?</summary>
+      <p>Imágenes (JPG/PNG) y videos (enlace). En esta demo no se suben archivos; todo es UI sin backend.</p>
+    </details>
+    <details class="faq">
+      <summary>¿Cómo funciona la navegación?</summary>
+      <p>Usa el menú superior para navegar entre secciones. Los botones te llevarán automáticamente a cada área del sitio.</p>
+    </details>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <div class="brand brand--footer">
+          <span class="brand__logo">⚽</span>
+          <span class="brand__text">Mundiales</span>
+        </div>
+        <p class="muted">Proyecto front-end de referencia. Back-end (PHP + MySQL, POO/MVC) no incluido.</p>
+      </div>
+      <div class="footer__links">
+        <a href="#mundiales" data-scroll>Explorar</a>
+        <a href="#publicaciones" data-scroll>Publicaciones</a>
+        <a href="#estadios" data-scroll>Estadios</a>
+        <a href="#jugadores" data-scroll>Jugadores</a>
+        <a href="#tools" data-scroll>Herramientas</a>
+      </div>
+    </div>
+    <div class="container footer__legal">
+      <small>© 2025 Demo educativa.</small>
+    </div>
+  </footer>
+
+  <!-- Modal: Registro / Login -->
+  <dialog id="auth-modal" class="modal">
+    <form method="dialog" class="modal__panel" id="auth-panel">
+      <header class="modal__head">
+        <h3 id="auth-title">Crear cuenta</h3>
+        <button class="icon-btn" id="auth-close" aria-label="Cerrar">✕</button>
+      </header>
+
+      <div style="display: flex; gap: 8px; margin-bottom: 1rem;">
+        <button class="btn btn--primary" type="button" data-auth="register" id="auth-register-tab">Registro</button>
+        <button class="btn btn--ghost" type="button" data-auth="login" id="auth-login-tab">Ingresar</button>
+      </div>
+
+      <!-- Registro -->
+      <div id="register-form" class="form">
+        <div class="form__row">
+          <label>Nombre completo
+            <input type="text" id="r-name" required>
+          </label>
+          <label>Correo electrónico
+            <input type="email" id="r-email" required>
+          </label>
+        </div>
+
+        <div class="form__row">
+          <label>Fecha de nacimiento
+            <input type="date" id="r-dob" required>
+          </label>
+          <label>Género
+            <select id="r-gender" required>
+              <option value="">Selecciona</option>
+              <option>Femenino</option>
+              <option>Masculino</option>
+              <option>No binario</option>
+              <option>Prefiero no decir</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="form__row">
+          <label>País de nacimiento
+            <input type="text" id="r-birth-country" required>
+          </label>
+          <label>Nacionalidad
+            <input type="text" id="r-nationality" required>
+          </label>
+        </div>
+
+        <div class="form__row">
+          <label>Foto (URL o archivo)
+            <input type="url" id="r-photo" placeholder="https://…">
+          </label>
+          <label>Contraseña
+            <input type="password" id="r-pass" required minlength="6">
+          </label>
+        </div>
+
+        <div class="form__actions">
+          <button type="button" class="btn btn--primary" id="btn-register">Crear cuenta</button>
+        </div>
+        <p class="form__hint">Al registrarte aceptas la moderación del contenido por administradores.</p>
+      </div>
+
+      <!-- Login -->
+      <div id="login-form" class="form is-hidden">
+        <label>Correo electrónico
+          <input type="email" id="l-email" required>
+        </label>
+        <label>Contraseña
+          <input type="password" id="l-pass" required>
+        </label>
+        <div class="form__actions">
+          <button type="button" class="btn btn--primary" id="btn-login">Ingresar</button>
+        </div>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Modal: Ver publicación -->
+  <dialog id="publication-modal" class="modal large">
+    <form method="dialog" class="modal__panel">
+      <header class="modal__head">
+        <h3 id="publication-title">Título de la publicación</h3>
+        <button class="icon-btn" id="publication-close" aria-label="Cerrar">✕</button>
+      </header>
+      
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+        <div>
+          <div style="border-radius: 12px; overflow: hidden; margin-bottom: 1rem;">
+            <img id="publication-img" src="" alt="" style="width: 100%; height: auto; display: block;">
+          </div>
+        </div>
+        
+        <div>
+          <div id="publication-description" style="line-height: 1.6; margin-bottom: 1.5rem;">
+            Descripción de la publicación...
+          </div>
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0;">
+            <div>
+              <div style="font-size: 0.8rem; color: var(--muted); margin-bottom: 0.25rem;">Mundial</div>
+              <div id="publication-worldcup" style="font-weight: 600;">Brasil 2014</div>
+            </div>
+            <div>
+              <div style="font-size: 0.8rem; color: var(--muted); margin-bottom: 0.25rem;">Categoría</div>
+              <div id="publication-category" style="font-weight: 600;">Jugadas</div>
+            </div>
+            <div>
+              <div style="font-size: 0.8rem; color: var(--muted); margin-bottom: 0.25rem;">Publicado por</div>
+              <div id="publication-author" style="font-weight: 600;">Juan Pérez</div>
+            </div>
+            <div>
+              <div style="font-size: 0.8rem; color: var(--muted); margin-bottom: 0.25rem;">Fecha</div>
+              <div id="publication-date" style="font-weight: 600;">13 Jul 2014</div>
+            </div>
+          </div>
+          
+          <div style="display: flex; gap: 1rem;">
+            <button class="btn btn--primary" id="like-btn">
+              <i class="fas fa-heart"></i> Me gusta
+            </button>
+            <button class="btn btn--ghost" id="comment-btn">
+              <i class="fas fa-comment"></i> Comentar
+            </button>
+            <button class="btn btn--ghost" id="share-btn">
+              <i class="fas fa-share"></i> Compartir
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Notificaciones -->
+  <div id="notification" class="notification"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
