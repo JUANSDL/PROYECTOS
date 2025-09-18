@@ -1,0 +1,54 @@
+
+#divLogin {
+ background-color: blue;
+ color:white;
+ padding-top: 25px;
+ padding-bottom: 25px;
+ padding-left: 25px;
+ padding-right: 25px;
+ width: 200px;
+ height: 200px;
+ border-radius: 20px;
+ margin: 20px auto 0;
+}
+
+#divLogin {
+ position: relative;
+ display: block;
+}
+
+form {
+ background-color: blue;
+ border-radius: 20px;
+ padding-top: 25px;
+ padding-bottom: 25px;
+ padding-left: 15px;
+ padding-right: 15px;
+}
+
+form {
+  position: relative;
+  top: 15px;
+}
+
+
+label {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.inputLogin {
+  width: 150px;
+  border-radius: 20px;
+}
+
+.btnLogin{
+  border-radius: 5px;
+}
+
+@media screen and (max-width:200px) {
+  form{
+    color: red;
+  }
+}

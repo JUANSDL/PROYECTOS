@@ -1,0 +1,79 @@
+
+#divLogin {
+ background-image: url(https://i.pinimg.com/originals/79/50/0c/79500cbc38fa4bd5f5b7c5d640a5cb35.gif);
+ background-repeat: no-repeat;
+  background-size:cover;
+
+ color:rgb(0, 0, 0);
+ padding-top: 100px;
+ padding-bottom: 50px;
+ padding-left: 100px;
+ padding-right: 100px;
+ width: 200px;
+ height: 200px;
+ border-radius: 20px;
+ margin: 20px auto 0;
+}
+
+#divLogin {
+ position: relative;
+ display: block;
+}
+body{
+  background-image: url(https://wallpaperaccess.com/full/554871.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+form {
+  background-image : url(https://images.freecreatives.com/wp-content/uploads/2016/03/Flowing-Light-Blue-Abstract-Background.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+
+ border-radius: 15px;
+ padding-top: 25px;
+ padding-bottom:25px;
+ padding-left: 15px;
+ padding-right: 15px;
+ width: 300px;
+ height: 300px;
+ margin: 20px auto 0;
+}
+
+form {
+  position:absolute; 
+  top: 15px;
+}
+
+
+label {
+  font-size: 30px;
+  font-weight:15;
+  font-family:cursive;
+  background-image: linear-gradient(to left, rgb(248, 155, 248), rgb(205, 139, 252), rgb(138, 138, 253), rgb(126, 250, 126), rgb(247, 247, 116), rgb(247, 199, 110), rgb(247, 143, 143));   -webkit-background-clip: text;
+
+  color: transparent;
+ 
+  
+}
+
+
+.inputLogin {
+  width: 150px;
+  border-radius: 20px;
+}
+
+.btnLogin:hover{
+  background-color: rgb(250, 158, 250);
+  border-radius: 5px;
+}
+
+@media screen and (max-width:200px) {
+  form{
+    color: rgb(255, 113, 170);
+  }
+}
+
+#conexiones {
+  
+  font-size: 15px;
+}
